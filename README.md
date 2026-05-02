@@ -39,4 +39,8 @@ Experimental themes and test packages live in `.training_ground/` and are intent
 
 ## License
 
-No open-source license has been selected yet. Treat the theme artwork and source files as all rights reserved until a license is added.
+This repository is licensed under the Creative Commons Attribution 4.0 International License.
+
+You may share and adapt the theme source files and artwork, including commercially, as long as you give appropriate credit and link to the license.
+
+See [LICENSE](LICENSE) or <https://creativecommons.org/licenses/by/4.0/>.

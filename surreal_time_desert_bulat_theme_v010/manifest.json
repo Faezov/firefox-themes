@@ -1,0 +1,53 @@
+{
+  "manifest_version": 2,
+  "name": "Surreal Time Desert Bulat Theme",
+  "version": "0.1.0",
+  "description": "Animated surreal night-desert Firefox theme with melting clock shapes, floating stars, and warm dreamlike shadows.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "surreal-time-desert-bulat@bulat",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "theme": {
+    "images": {
+      "theme_frame": "images/surreal_time_desert_5000x200.svg"
+    },
+    "colors": {
+      "frame": "rgba(12, 7, 18, 0.20)",
+      "frame_inactive": "rgba(12, 7, 18, 0.48)",
+      "toolbar": "rgba(15, 8, 22, 0.14)",
+      "toolbar_text": "rgba(255, 244, 222, 0.97)",
+      "tab_background_text": "rgba(239, 216, 190, 0.94)",
+      "tab_text": "rgba(255, 255, 255, 0.98)",
+      "toolbar_field": "rgba(17, 10, 24, 0.34)",
+      "toolbar_field_text": "rgba(255, 247, 230, 0.95)",
+      "toolbar_field_text_focus": "rgba(255, 250, 238, 1)",
+      "toolbar_field_border": "rgba(244, 184, 102, 0.38)",
+      "toolbar_field_border_focus": "rgba(255, 211, 132, 0.78)",
+      "toolbar_top_separator": "rgba(255, 219, 158, 0.15)",
+      "toolbar_bottom_separator": "rgba(209, 135, 72, 0.22)",
+      "ntp_background": "rgba(9, 6, 16, 0.98)",
+      "bookmark_text": "rgba(250, 232, 205, 0.94)",
+      "icons": "rgba(255, 241, 218, 0.96)",
+      "icons_attention": "#ffd27d",
+      "button_background_hover": "rgba(244, 184, 102, 0.16)",
+      "button_background_active": "rgba(244, 184, 102, 0.25)",
+      "popup": "#110a18",
+      "popup_text": "#fff2dc",
+      "popup_border": "#785033",
+      "popup_highlight": "#71451f",
+      "popup_highlight_text": "#ffffff",
+      "sidebar": "#110a18",
+      "sidebar_text": "#fff2dc"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

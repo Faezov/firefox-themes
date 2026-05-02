@@ -1,6 +1,6 @@
 # Bulat Firefox Themes
 
-A small collection of Firefox static themes built from simple WebExtension manifests and custom theme artwork.
+A small collection of Firefox themes built from simple WebExtension manifests and custom theme artwork.
 
 ## Themes
 
@@ -8,6 +8,7 @@ A small collection of Firefox static themes built from simple WebExtension manif
 | --- | --- | --- |
 | Dark Forest Rain Bulat Theme | `dark_forest_rain_bulat_theme_v040/` | Animated SVG header, dark forest rain palette, no scripts. |
 | Southern Cross Night Bulat Theme | `southern_cross_night_bulat_theme_v010/` | Animated SVG southern night sky with a bright Southern Cross, soft rain, and forest horizon. |
+| Surreal Time Desert Bulat Theme | `surreal_time_desert_bulat_theme_v010/` | Animated SVG night desert with melting clock shapes, floating stars, and warm dream shadows. |
 | Neon Tide | `neon-tide-theme/` | Static PNG header with neon cyan waves and bundled theme icons. |
 | Neon Pixel Tide | `neon-pixel-tide/neon-pixel-tide-theme/` | Animated SVG pixel-art tide with neon particles. |
 | Deep Blue | `deep-blue-theme/` | Lightweight color-only dark blue theme. |

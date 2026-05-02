@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="5000" height="200" viewBox="0 0 5000 200" preserveAspectRatio="xMaxYMin slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#080611"/>
+      <stop offset="35%" stop-color="#171027"/>
+      <stop offset="66%" stop-color="#2a1430"/>
+      <stop offset="100%" stop-color="#130a12"/>
+    </linearGradient>
+    <linearGradient id="leftReadability" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#07050d" stop-opacity=".94"/>
+      <stop offset="34%" stop-color="#07050d" stop-opacity=".76"/>
+      <stop offset="62%" stop-color="#07050d" stop-opacity=".22"/>
+      <stop offset="100%" stop-color="#07050d" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#251226"/>
+      <stop offset="38%" stop-color="#4a272d"/>
+      <stop offset="70%" stop-color="#7e4a2c"/>
+      <stop offset="100%" stop-color="#b9783b"/>
+    </linearGradient>
+    <linearGradient id="clockFace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff4cc"/>
+      <stop offset="58%" stop-color="#f4bd64"/>
+      <stop offset="100%" stop-color="#7a3b22"/>
+    </linearGradient>
+    <radialGradient id="horizonGlow" cx="82%" cy="76%" r="46%">
+      <stop offset="0%" stop-color="#ffc46b" stop-opacity=".42"/>
+      <stop offset="42%" stop-color="#d76f43" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#190912" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="moonGlow" cx="85%" cy="24%" r="34%">
+      <stop offset="0%" stop-color="#fff3c7" stop-opacity=".36"/>
+      <stop offset="42%" stop-color="#f4a75d" stop-opacity=".13"/>
+      <stop offset="100%" stop-color="#160915" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="bigGlow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadowBlur" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="2.8"/>
+    </filter>
+    <style>
+      .float-a { animation: floatA 7s ease-in-out infinite; }
+      .float-b { animation: floatB 9s ease-in-out infinite; }
+      .twinkle-a { animation: twinkleA 4.8s ease-in-out infinite; }
+      .twinkle-b { animation: twinkleB 6.2s ease-in-out infinite; }
+      .clock-pulse { animation: clockPulse 5.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .drip { animation: drip 3.8s ease-in-out infinite; transform-box: fill-box; transform-origin: top; }
+      .horizon { animation: horizon 10s ease-in-out infinite alternate; }
+      .hand { animation: handSweep 12s linear infinite; transform-box: fill-box; transform-origin: 50% 50%; }
+      @keyframes floatA { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      @keyframes floatB { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-18px, 7px); } }
+      @keyframes twinkleA { 0%,100% { opacity: .35; } 50% { opacity: .96; } }
+      @keyframes twinkleB { 0%,100% { opacity: .24; } 50% { opacity: .72; } }
+      @keyframes clockPulse { 0%,100% { opacity: .88; transform: scale(1); } 50% { opacity: 1; transform: scale(1.025); } }
+      @keyframes drip { 0%,100% { transform: scaleY(.82); opacity: .74; } 50% { transform: scaleY(1.16); opacity: 1; } }
+      @keyframes horizon { from { opacity: .62; } to { opacity: .95; } }
+      @keyframes handSweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    </style>
+  </defs>
+
+  <rect width="5000" height="200" fill="url(#sky)"/>
+  <rect width="5000" height="200" fill="url(#horizonGlow)" class="horizon"/>
+  <rect width="5000" height="200" fill="url(#moonGlow)">
+    <animate attributeName="opacity" values=".62;.88;.62" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <rect width="3100" height="200" fill="url(#leftReadability)"/>
+
+  <g filter="url(#bigGlow)" class="float-a">
+    <circle cx="4245" cy="38" r="31" fill="#ffe9a6" opacity=".96"/>
+    <circle cx="4256" cy="31" r="31" fill="#171027" opacity=".84"/>
+    <ellipse cx="4232" cy="46" rx="14" ry="4" fill="#ffcf75" opacity=".45"/>
+  </g>
+
+  <g fill="#fff0c2">
+    <circle class="twinkle-a" cx="3140" cy="28" r="1.2" opacity=".76"/>
+    <circle class="twinkle-b" cx="3338" cy="66" r=".9" opacity=".55"/>
+    <circle class="twinkle-a" cx="3525" cy="38" r="1.1" opacity=".70"/>
+    <circle class="twinkle-b" cx="3710" cy="92" r=".8" opacity=".48"/>
+    <circle class="twinkle-a" cx="3864" cy="22" r="1.2" opacity=".74"/>
+    <circle class="twinkle-b" cx="4070" cy="78" r=".8" opacity=".50"/>
+    <circle class="twinkle-a" cx="4440" cy="85" r="1.1" opacity=".70"/>
+    <circle class="twinkle-b" cx="4620" cy="35" r=".8" opacity=".54"/>
+    <circle class="twinkle-a" cx="4865" cy="104" r="1.2" opacity=".68"/>
+    <circle class="twinkle-b" cx="2740" cy="84" r=".8" opacity=".42"/>
+    <circle class="twinkle-a" cx="2360" cy="48" r=".9" opacity=".40"/>
+    <circle class="twinkle-b" cx="1940" cy="108" r=".8" opacity=".36"/>
+    <circle class="twinkle-a" cx="1560" cy="62" r=".9" opacity=".34"/>
+    <circle class="twinkle-b" cx="1060" cy="98" r=".8" opacity=".30"/>
+  </g>
+
+  <g class="float-b" filter="url(#softGlow)">
+    <path d="M3500 82 C3580 68 3640 72 3694 90 C3644 108 3584 108 3500 82 Z" fill="#ffe7aa" opacity=".72"/>
+    <circle cx="3596" cy="88" r="13" fill="#1b0e22" opacity=".74"/>
+    <circle cx="3598" cy="87" r="5" fill="#ffd381" opacity=".90"/>
+    <path d="M3494 82 C3580 40 3658 48 3718 92" fill="none" stroke="#f7bf75" stroke-width="2" opacity=".42"/>
+  </g>
+
+  <g filter="url(#shadowBlur)" opacity=".42">
+    <ellipse cx="4040" cy="176" rx="620" ry="18" fill="#050308"/>
+    <ellipse cx="4540" cy="182" rx="560" ry="14" fill="#050308"/>
+  </g>
+
+  <g>
+    <path d="M0 142 C580 124 1110 152 1660 136 C2215 120 2750 145 3250 132 C3770 118 4250 136 5000 112 L5000 200 L0 200 Z" fill="url(#sand)" opacity=".94"/>
+    <path d="M0 162 C650 146 1160 174 1780 154 C2370 136 2920 166 3460 148 C4040 130 4440 160 5000 138 L5000 200 L0 200 Z" fill="#160911" opacity=".72"/>
+    <path d="M0 184 C700 170 1290 190 1970 176 C2620 162 3260 188 3860 172 C4320 160 4660 178 5000 166 L5000 200 L0 200 Z" fill="#08050a" opacity=".88"/>
+  </g>
+
+  <g filter="url(#softGlow)" class="clock-pulse">
+    <path d="M3860 103 C3946 82 4028 82 4116 104 C4186 122 4262 124 4338 110 C4316 143 4254 154 4186 148 C4100 140 4024 138 3942 152 C3886 162 3828 150 3812 126 C3802 114 3816 108 3860 103 Z" fill="url(#clockFace)" opacity=".94"/>
+    <path d="M3868 110 C3948 94 4022 94 4104 112 C4170 126 4248 128 4314 118" fill="none" stroke="#fff5d8" stroke-width="4" stroke-linecap="round" opacity=".58"/>
+    <g fill="#3a1d16" opacity=".78">
+      <circle cx="3986" cy="122" r="2.6"/>
+      <circle cx="4068" cy="116" r="2.4"/>
+      <circle cx="4152" cy="126" r="2.6"/>
+      <circle cx="4230" cy="125" r="2.2"/>
+    </g>
+    <g class="hand">
+      <path d="M4074 121 L4124 108" stroke="#34170f" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M4074 121 L4045 100" stroke="#34170f" stroke-width="2.2" stroke-linecap="round"/>
+    </g>
+    <circle cx="4074" cy="121" r="5" fill="#33160f"/>
+    <path class="drip" d="M3932 146 C3952 160 3946 180 3928 196 C3914 178 3916 160 3932 146 Z" fill="#d9853d" opacity=".82"/>
+    <path class="drip" d="M4190 146 C4214 160 4208 186 4186 200 C4170 178 4172 160 4190 146 Z" fill="#f0a34b" opacity=".78"/>
+  </g>
+
+  <g filter="url(#softGlow)" opacity=".96">
+    <path d="M4590 70 C4658 56 4720 70 4770 106 C4696 122 4612 118 4546 96 C4546 86 4562 76 4590 70 Z" fill="url(#clockFace)"/>
+    <path d="M4588 80 C4655 72 4712 84 4756 108" fill="none" stroke="#fff6d7" stroke-width="3.5" stroke-linecap="round" opacity=".58"/>
+    <circle cx="4668" cy="94" r="4.2" fill="#37170f"/>
+    <path class="hand" d="M4668 94 L4696 82" stroke="#37170f" stroke-width="2.2" stroke-linecap="round"/>
+    <path class="drip" d="M4632 108 C4650 124 4642 146 4626 160 C4614 140 4616 122 4632 108 Z" fill="#d9843d" opacity=".82"/>
+  </g>
+
+  <g fill="#070407">
+    <path d="M4320 104 C4380 86 4445 92 4505 120 L4505 200 L4246 200 C4262 158 4288 124 4320 104 Z"/>
+    <path d="M4280 118 C4320 130 4370 132 4432 116" fill="none" stroke="#20100e" stroke-width="8" opacity=".42"/>
+    <path d="M0 188 L5000 188 L5000 200 L0 200 Z"/>
+  </g>
+
+  <g class="float-a" opacity=".62">
+    <path d="M3290 128 C3360 106 3450 116 3500 146 C3414 154 3348 150 3290 128 Z" fill="#f9c06e" opacity=".38"/>
+    <path d="M3330 134 C3402 122 3454 130 3490 146" fill="none" stroke="#ffe1a0" stroke-width="2" opacity=".36"/>
+  </g>
+</svg>

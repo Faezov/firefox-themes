@@ -1,0 +1,53 @@
+{
+  "manifest_version": 2,
+  "name": "Impressionist Water Garden Bulat Theme",
+  "version": "0.1.0",
+  "description": "Animated impressionist water-garden Firefox theme with soft dawn light, lily pads, floating brushstrokes, and shimmering reflections.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "impressionist-water-garden-bulat@bulat",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "theme": {
+    "images": {
+      "theme_frame": "images/impressionist_water_garden_5000x200.svg"
+    },
+    "colors": {
+      "frame": "rgba(8, 18, 28, 0.18)",
+      "frame_inactive": "rgba(8, 18, 28, 0.44)",
+      "toolbar": "rgba(9, 22, 32, 0.14)",
+      "toolbar_text": "rgba(246, 252, 239, 0.97)",
+      "tab_background_text": "rgba(221, 239, 230, 0.94)",
+      "tab_text": "rgba(255, 255, 255, 0.98)",
+      "toolbar_field": "rgba(8, 20, 31, 0.32)",
+      "toolbar_field_text": "rgba(249, 254, 243, 0.95)",
+      "toolbar_field_text_focus": "rgba(255, 255, 248, 1)",
+      "toolbar_field_border": "rgba(174, 219, 191, 0.38)",
+      "toolbar_field_border_focus": "rgba(230, 229, 165, 0.78)",
+      "toolbar_top_separator": "rgba(226, 238, 202, 0.16)",
+      "toolbar_bottom_separator": "rgba(99, 161, 156, 0.22)",
+      "ntp_background": "rgba(6, 16, 24, 0.98)",
+      "bookmark_text": "rgba(236, 249, 233, 0.94)",
+      "icons": "rgba(245, 252, 238, 0.96)",
+      "icons_attention": "#f0e88c",
+      "button_background_hover": "rgba(174, 219, 191, 0.16)",
+      "button_background_active": "rgba(174, 219, 191, 0.25)",
+      "popup": "#0b1720",
+      "popup_text": "#f4fbe9",
+      "popup_border": "#607d64",
+      "popup_highlight": "#386a68",
+      "popup_highlight_text": "#ffffff",
+      "sidebar": "#0b1720",
+      "sidebar_text": "#f4fbe9"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

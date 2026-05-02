@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="5000" height="200" viewBox="0 0 5000 200" preserveAspectRatio="xMaxYMin slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dee8ff"/>
+      <stop offset="28%" stop-color="#b9d6ee"/>
+      <stop offset="58%" stop-color="#8db9c0"/>
+      <stop offset="100%" stop-color="#376d75"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0b1b28"/>
+      <stop offset="30%" stop-color="#1b4d5a"/>
+      <stop offset="62%" stop-color="#4f8d8a"/>
+      <stop offset="100%" stop-color="#9eb885"/>
+    </linearGradient>
+    <linearGradient id="leftReadability" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#061019" stop-opacity=".94"/>
+      <stop offset="34%" stop-color="#061019" stop-opacity=".78"/>
+      <stop offset="60%" stop-color="#061019" stop-opacity=".26"/>
+      <stop offset="100%" stop-color="#061019" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="dawnGlow" cx="83%" cy="26%" r="46%">
+      <stop offset="0%" stop-color="#fff0b7" stop-opacity=".56"/>
+      <stop offset="42%" stop-color="#f5b6b5" stop-opacity=".19"/>
+      <stop offset="100%" stop-color="#7bb0d2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mistGlow" cx="70%" cy="70%" r="62%">
+      <stop offset="0%" stop-color="#fff5d0" stop-opacity=".34"/>
+      <stop offset="46%" stop-color="#d8eee6" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#235666" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softBlur" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="2.1"/>
+    </filter>
+    <filter id="paintGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .drift-a { animation: driftA 13s ease-in-out infinite alternate; }
+      .drift-b { animation: driftB 17s ease-in-out infinite alternate; }
+      .shimmer-a { animation: shimmerA 4.8s ease-in-out infinite; }
+      .shimmer-b { animation: shimmerB 6.4s ease-in-out infinite; }
+      .lily-a { animation: lilyA 8s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+      .lily-b { animation: lilyB 10s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+      .sun-pulse { animation: sunPulse 7s ease-in-out infinite; }
+      @keyframes driftA { from { transform: translateX(-44px); } to { transform: translateX(62px); } }
+      @keyframes driftB { from { transform: translateX(58px); } to { transform: translateX(-76px); } }
+      @keyframes shimmerA { 0%,100% { opacity: .42; } 50% { opacity: .88; } }
+      @keyframes shimmerB { 0%,100% { opacity: .28; } 50% { opacity: .72; } }
+      @keyframes lilyA { from { transform: translateY(0) rotate(-1deg); } to { transform: translateY(-4px) rotate(2deg); } }
+      @keyframes lilyB { from { transform: translateY(2px) rotate(2deg); } to { transform: translateY(-3px) rotate(-2deg); } }
+      @keyframes sunPulse { 0%,100% { opacity: .72; } 50% { opacity: 1; } }
+    </style>
+  </defs>
+
+  <rect width="5000" height="200" fill="url(#sky)"/>
+  <rect width="5000" height="200" fill="url(#dawnGlow)" class="sun-pulse"/>
+  <path d="M0 72 C600 58 1010 76 1520 62 C2080 46 2600 74 3090 54 C3620 34 4210 44 5000 20 L5000 118 C4220 112 3660 104 3100 116 C2490 130 2030 100 1490 118 C980 136 540 116 0 130 Z" fill="#f7d3c0" opacity=".24" filter="url(#softBlur)"/>
+  <path d="M0 92 C520 78 1080 96 1560 82 C2170 64 2640 98 3220 76 C3730 56 4280 68 5000 50 L5000 126 C4420 126 3830 118 3260 132 C2680 146 2180 120 1600 136 C1020 152 520 132 0 144 Z" fill="#d9e8d2" opacity=".20" filter="url(#softBlur)"/>
+
+  <rect y="104" width="5000" height="96" fill="url(#water)"/>
+  <rect width="3150" height="200" fill="url(#leftReadability)"/>
+  <rect width="5000" height="200" fill="url(#mistGlow)" opacity=".74"/>
+
+  <g class="drift-a" opacity=".92">
+    <path d="M3080 114 C3310 102 3560 106 3770 118" fill="none" stroke="#fff0ad" stroke-width="7" stroke-linecap="round" opacity=".38"/>
+    <path d="M3440 132 C3710 116 4020 120 4320 138" fill="none" stroke="#edb9c7" stroke-width="8" stroke-linecap="round" opacity=".30"/>
+    <path d="M3880 96 C4140 82 4500 84 4840 104" fill="none" stroke="#eff7d4" stroke-width="6" stroke-linecap="round" opacity=".34"/>
+    <path d="M2300 126 C2600 112 2920 116 3180 132" fill="none" stroke="#abd7c8" stroke-width="7" stroke-linecap="round" opacity=".36"/>
+  </g>
+  <g class="drift-b" opacity=".88">
+    <path d="M2780 150 C3120 132 3550 138 3900 156" fill="none" stroke="#b5d7ef" stroke-width="9" stroke-linecap="round" opacity=".30"/>
+    <path d="M3600 166 C3940 150 4380 154 4820 176" fill="none" stroke="#f4de90" stroke-width="6" stroke-linecap="round" opacity=".34"/>
+    <path d="M1780 154 C2180 136 2580 142 2960 160" fill="none" stroke="#7fc7bf" stroke-width="8" stroke-linecap="round" opacity=".28"/>
+    <path d="M4100 124 C4380 110 4660 114 5000 132" fill="none" stroke="#fff4ce" stroke-width="5" stroke-linecap="round" opacity=".34"/>
+  </g>
+
+  <g filter="url(#paintGlow)" opacity=".92">
+    <ellipse class="shimmer-a" cx="4290" cy="38" rx="46" ry="18" fill="#fff3ad" opacity=".78"/>
+    <ellipse class="shimmer-b" cx="4235" cy="54" rx="68" ry="12" fill="#f3b5b4" opacity=".34"/>
+    <ellipse class="shimmer-a" cx="4380" cy="70" rx="110" ry="10" fill="#f7dfa0" opacity=".26"/>
+  </g>
+
+  <g opacity=".74">
+    <path d="M0 106 C420 92 760 112 1130 98 C1600 82 1980 110 2380 92 C2780 74 3180 98 3600 80 C4010 62 4430 72 5000 48 L5000 72 C4420 92 4010 84 3600 98 C3180 114 2780 94 2360 112 C1970 130 1580 104 1120 120 C710 134 390 116 0 132 Z" fill="#395f67" opacity=".38"/>
+    <path d="M0 118 C640 104 1130 126 1680 112 C2230 96 2700 124 3260 108 C3820 92 4320 102 5000 82 L5000 104 C4320 124 3820 112 3260 126 C2700 142 2230 116 1680 132 C1120 148 640 128 0 144 Z" fill="#123642" opacity=".30"/>
+  </g>
+
+  <g class="drift-a" fill="#eef7d1" opacity=".86">
+    <ellipse class="lily-a" cx="3320" cy="148" rx="58" ry="14" fill="#315f49"/>
+    <ellipse class="lily-b" cx="3435" cy="162" rx="42" ry="11" fill="#5b8c52"/>
+    <ellipse class="lily-a" cx="3810" cy="138" rx="50" ry="13" fill="#426f46"/>
+    <ellipse class="lily-b" cx="4105" cy="156" rx="64" ry="15" fill="#2f6b58"/>
+    <ellipse class="lily-a" cx="4520" cy="144" rx="52" ry="13" fill="#6e9654"/>
+    <ellipse class="lily-b" cx="4750" cy="166" rx="70" ry="16" fill="#34664e"/>
+  </g>
+  <g class="drift-b" opacity=".90">
+    <ellipse class="lily-a" cx="3010" cy="166" rx="38" ry="10" fill="#547c4b"/>
+    <ellipse class="lily-b" cx="3620" cy="176" rx="54" ry="13" fill="#2f5b49"/>
+    <ellipse class="lily-a" cx="4320" cy="178" rx="46" ry="12" fill="#5e884e"/>
+    <ellipse class="lily-b" cx="4880" cy="142" rx="44" ry="12" fill="#416d51"/>
+  </g>
+
+  <g filter="url(#paintGlow)" opacity=".95">
+    <ellipse class="shimmer-a" cx="3378" cy="142" rx="9" ry="4" fill="#f4c3d4"/>
+    <ellipse class="shimmer-b" cx="3848" cy="132" rx="8" ry="4" fill="#fff4b8"/>
+    <ellipse class="shimmer-a" cx="4138" cy="150" rx="10" ry="5" fill="#f0b6c8"/>
+    <ellipse class="shimmer-b" cx="4560" cy="138" rx="9" ry="4" fill="#fff0a8"/>
+    <ellipse class="shimmer-a" cx="4788" cy="160" rx="11" ry="5" fill="#f4c3d4"/>
+  </g>
+
+  <g class="drift-b" opacity=".60">
+    <path d="M3020 84 C3180 58 3390 60 3540 90" fill="none" stroke="#5b8978" stroke-width="9" stroke-linecap="round"/>
+    <path d="M3040 92 C3220 70 3380 72 3520 98" fill="none" stroke="#d9e7c1" stroke-width="4" stroke-linecap="round" opacity=".52"/>
+    <path d="M3610 82 C3790 54 3990 58 4180 94" fill="none" stroke="#446e63" stroke-width="8" stroke-linecap="round" opacity=".74"/>
+    <path d="M3640 90 C3830 70 3980 72 4160 100" fill="none" stroke="#e8d2cb" stroke-width="4" stroke-linecap="round" opacity=".50"/>
+  </g>
+
+  <g opacity=".70">
+    <path d="M0 184 C650 166 1120 190 1710 176 C2300 160 2820 188 3400 170 C3980 152 4440 174 5000 160 L5000 200 L0 200 Z" fill="#07121a"/>
+    <path d="M0 194 C760 182 1330 200 2040 188 C2700 176 3340 198 3960 184 C4480 172 4740 188 5000 178 L5000 200 L0 200 Z" fill="#040a10"/>
+  </g>
+</svg>

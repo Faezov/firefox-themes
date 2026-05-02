@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="5000" height="200" viewBox="0 0 5000 200" preserveAspectRatio="xMaxYMin slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#020611"/>
+      <stop offset="40%" stop-color="#06162a"/>
+      <stop offset="72%" stop-color="#08233a"/>
+      <stop offset="100%" stop-color="#01070d"/>
+    </linearGradient>
+    <linearGradient id="leftReadability" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#01070d" stop-opacity=".92"/>
+      <stop offset="34%" stop-color="#01070d" stop-opacity=".72"/>
+      <stop offset="58%" stop-color="#01070d" stop-opacity=".24"/>
+      <stop offset="100%" stop-color="#01070d" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="crossGlow" cx="86%" cy="26%" r="30%">
+      <stop offset="0%" stop-color="#dff8ff" stop-opacity=".42"/>
+      <stop offset="34%" stop-color="#8bdcff" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#03101b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="milkyWay" cx="75%" cy="18%" r="62%">
+      <stop offset="0%" stop-color="#d7ecff" stop-opacity=".20"/>
+      <stop offset="42%" stop-color="#7dbbe1" stop-opacity=".08"/>
+      <stop offset="100%" stop-color="#061629" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="horizonFog" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7fd9ff" stop-opacity=".20"/>
+      <stop offset="58%" stop-color="#2d88a8" stop-opacity=".08"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow" x="-90%" y="-90%" width="280%" height="280%">
+      <feGaussianBlur stdDeviation="3.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="largeGlow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="rainBlur" x="-20%" y="-80%" width="140%" height="260%">
+      <feGaussianBlur stdDeviation=".42"/>
+    </filter>
+    <style>
+      .twinkle-a { animation: twinkleA 4.8s ease-in-out infinite; }
+      .twinkle-b { animation: twinkleB 6.3s ease-in-out infinite; }
+      .cross-star { animation: crossPulse 3.7s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .rain-a { animation: rainA 1.35s linear infinite; }
+      .rain-b { animation: rainB 1.9s linear infinite; }
+      .mist { animation: mistDrift 12s ease-in-out infinite alternate; }
+      @keyframes twinkleA { 0%,100% { opacity: .42; } 50% { opacity: .95; } }
+      @keyframes twinkleB { 0%,100% { opacity: .28; } 50% { opacity: .72; } }
+      @keyframes crossPulse { 0%,100% { opacity: .92; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+      @keyframes rainA { from { transform: translate(0,-70px); } to { transform: translate(-34px,85px); } }
+      @keyframes rainB { from { transform: translate(0,-110px); } to { transform: translate(-48px,105px); } }
+      @keyframes mistDrift { from { transform: translateX(-24px); } to { transform: translateX(42px); } }
+    </style>
+  </defs>
+
+  <rect width="5000" height="200" fill="url(#sky)"/>
+  <rect width="5000" height="200" fill="url(#milkyWay)" opacity=".95"/>
+  <rect width="5000" height="200" fill="url(#crossGlow)">
+    <animate attributeName="opacity" values=".62;.9;.62" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <rect width="3100" height="200" fill="url(#leftReadability)"/>
+
+  <g opacity=".82" filter="url(#softGlow)">
+    <path d="M3440 0 C3700 34 3900 72 4170 108 C4430 142 4680 156 5000 172 L5000 0 Z" fill="#cbe8ff" opacity=".035"/>
+    <path d="M3540 0 C3810 42 4075 82 4320 116 C4550 148 4765 168 5000 190 L5000 0 Z" fill="#b6d8ff" opacity=".045"/>
+  </g>
+
+  <g fill="#d9f5ff">
+    <circle class="twinkle-a" cx="3180" cy="28" r="1.3" opacity=".78"/>
+    <circle class="twinkle-b" cx="3308" cy="74" r=".9" opacity=".55"/>
+    <circle class="twinkle-a" cx="3452" cy="48" r="1.1" opacity=".62"/>
+    <circle class="twinkle-b" cx="3610" cy="22" r=".8" opacity=".50"/>
+    <circle class="twinkle-a" cx="3718" cy="92" r="1.4" opacity=".72"/>
+    <circle class="twinkle-b" cx="3864" cy="37" r=".9" opacity=".58"/>
+    <circle class="twinkle-a" cx="3976" cy="76" r="1.1" opacity=".74"/>
+    <circle class="twinkle-b" cx="4115" cy="20" r=".8" opacity=".50"/>
+    <circle class="twinkle-a" cx="4325" cy="93" r="1.2" opacity=".70"/>
+    <circle class="twinkle-b" cx="4470" cy="34" r=".9" opacity=".58"/>
+    <circle class="twinkle-a" cx="4620" cy="82" r="1.0" opacity=".64"/>
+    <circle class="twinkle-b" cx="4795" cy="46" r=".8" opacity=".54"/>
+    <circle class="twinkle-a" cx="4920" cy="118" r="1.2" opacity=".66"/>
+    <circle class="twinkle-b" cx="2980" cy="96" r=".8" opacity=".42"/>
+    <circle class="twinkle-a" cx="2706" cy="42" r="1.0" opacity=".58"/>
+    <circle class="twinkle-b" cx="2440" cy="112" r=".8" opacity=".38"/>
+    <circle class="twinkle-a" cx="2230" cy="58" r=".9" opacity=".44"/>
+    <circle class="twinkle-b" cx="1910" cy="30" r=".8" opacity=".36"/>
+    <circle class="twinkle-a" cx="1548" cy="84" r=".9" opacity=".38"/>
+    <circle class="twinkle-b" cx="1260" cy="46" r=".8" opacity=".32"/>
+    <circle class="twinkle-a" cx="890" cy="98" r=".9" opacity=".30"/>
+    <circle class="twinkle-b" cx="540" cy="52" r=".8" opacity=".28"/>
+  </g>
+
+  <!-- Southern Cross: Acrux, Mimosa, Gacrux, Delta Crucis, and Epsilon Crucis. -->
+  <g id="southern-cross" filter="url(#largeGlow)">
+    <path d="M4312 30 L4218 112 M4166 63 L4366 82" stroke="#dff8ff" stroke-width="2.2" stroke-linecap="round" opacity=".34"/>
+    <g fill="#f4fdff">
+      <g class="cross-star">
+        <circle cx="4312" cy="30" r="5.6"/>
+        <path d="M4312 15 L4316 30 L4312 45 L4308 30 Z M4297 30 L4312 26 L4327 30 L4312 34 Z" fill="#ffffff"/>
+      </g>
+      <g class="cross-star">
+        <circle cx="4218" cy="112" r="6.7"/>
+        <path d="M4218 94 L4223 112 L4218 130 L4213 112 Z M4200 112 L4218 107 L4236 112 L4218 117 Z" fill="#ffffff"/>
+      </g>
+      <g class="cross-star">
+        <circle cx="4166" cy="63" r="5.2"/>
+        <path d="M4166 49 L4170 63 L4166 77 L4162 63 Z M4152 63 L4166 59 L4180 63 L4166 67 Z" fill="#ffffff"/>
+      </g>
+      <g class="cross-star">
+        <circle cx="4366" cy="82" r="4.8"/>
+        <path d="M4366 69 L4370 82 L4366 95 L4362 82 Z M4353 82 L4366 78 L4379 82 L4366 86 Z" fill="#ffffff"/>
+      </g>
+      <g class="cross-star">
+        <circle cx="4260" cy="76" r="3.5"/>
+        <path d="M4260 65 L4263 76 L4260 87 L4257 76 Z M4249 76 L4260 73 L4271 76 L4260 79 Z" fill="#ffffff"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Pointer stars, kept softer so the Southern Cross remains the hero. -->
+  <g filter="url(#softGlow)" fill="#d9f5ff" opacity=".88">
+    <circle class="twinkle-a" cx="3900" cy="62" r="3.0"/>
+    <circle class="twinkle-b" cx="3812" cy="92" r="2.4"/>
+    <path d="M3812 92 L3900 62" stroke="#c9efff" stroke-width="1.4" opacity=".18"/>
+  </g>
+
+  <g class="rain-a" stroke="#bcecff" stroke-linecap="round" filter="url(#rainBlur)" opacity=".38">
+    <path d="M360 4 l-22 84" stroke-width="1.1"/>
+    <path d="M760 -18 l-28 106" stroke-width="1.0"/>
+    <path d="M1190 8 l-24 92" stroke-width="1.2"/>
+    <path d="M1660 -24 l-30 112" stroke-width="1.0"/>
+    <path d="M2110 6 l-26 96" stroke-width="1.1"/>
+    <path d="M2580 -20 l-30 112" stroke-width="1.0"/>
+    <path d="M3060 2 l-26 98" stroke-width="1.1"/>
+    <path d="M3520 -28 l-31 114" stroke-width="1.0"/>
+    <path d="M3980 8 l-25 94" stroke-width="1.1"/>
+    <path d="M4430 -18 l-30 108" stroke-width="1.0"/>
+    <path d="M4880 2 l-26 98" stroke-width="1.1"/>
+  </g>
+  <g class="rain-b" stroke="#78d4ff" stroke-linecap="round" filter="url(#rainBlur)" opacity=".24">
+    <path d="M180 -36 l-36 132" stroke-width=".9"/>
+    <path d="M560 -8 l-30 112" stroke-width=".8"/>
+    <path d="M1040 -42 l-38 136" stroke-width=".9"/>
+    <path d="M1480 -14 l-32 118" stroke-width=".8"/>
+    <path d="M1920 -40 l-36 132" stroke-width=".9"/>
+    <path d="M2380 -6 l-30 112" stroke-width=".8"/>
+    <path d="M2840 -44 l-38 136" stroke-width=".9"/>
+    <path d="M3280 -12 l-32 118" stroke-width=".8"/>
+    <path d="M3740 -38 l-36 132" stroke-width=".9"/>
+    <path d="M4180 -8 l-30 112" stroke-width=".8"/>
+    <path d="M4660 -42 l-38 136" stroke-width=".9"/>
+  </g>
+
+  <g class="mist">
+    <rect x="0" y="126" width="5000" height="42" fill="url(#horizonFog)" opacity=".76"/>
+    <path d="M0 152 C650 132 1120 166 1740 144 C2380 122 2960 160 3560 140 C4140 120 4580 146 5000 132 L5000 200 L0 200 Z" fill="#77d7ff" opacity=".055"/>
+  </g>
+
+  <g fill="#01080d">
+    <path d="M0 158 L52 126 L92 158 L144 116 L196 158 L240 132 L292 158 L336 120 L386 158 L430 134 L486 158 L534 118 L590 158 L638 132 L700 158 L752 122 L812 158 L862 130 L924 158 L990 116 L1048 158 L1110 132 L1178 158 L1234 124 L1296 158 L1360 132 L1426 158 L1496 118 L1560 158 L1630 130 L1702 158 L1764 124 L1830 158 L1900 134 L1972 158 L2040 122 L2110 158 L2182 132 L2254 158 L2324 116 L2394 158 L2468 130 L2542 158 L2612 122 L2690 158 L2760 136 L2834 158 L2910 124 L2988 158 L3066 132 L3142 158 L3220 116 L3294 158 L3372 130 L3452 158 L3526 124 L3608 158 L3684 134 L3764 158 L3842 122 L3924 158 L4008 130 L4090 158 L4178 118 L4258 158 L4342 132 L4428 158 L4516 124 L4604 158 L4690 134 L4778 158 L4862 122 L4942 158 L5000 132 L5000 200 L0 200 Z"/>
+    <path d="M0 174 C420 160 820 180 1280 166 C1830 150 2240 182 2780 166 C3370 148 3860 178 4370 160 C4660 150 4850 156 5000 146 L5000 200 L0 200 Z" opacity=".78"/>
+  </g>
+
+  <rect x="0" y="188" width="5000" height="12" fill="#010509" opacity=".92"/>
+</svg>

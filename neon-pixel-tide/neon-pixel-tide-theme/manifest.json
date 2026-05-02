@@ -1,0 +1,50 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "neon-pixel-tide@bulatfaezov",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "version": "1.0",
+  "name": "Neon Pixel Tide",
+  "description": "An animated pixel-art Firefox theme with electric cyan waves, neon particles, and a deep navy frame.",
+  "theme": {
+    "images": {
+      "theme_frame": "images/neon-pixel-tide.svg"
+    },
+    "colors": {
+      "frame": "#030712",
+      "toolbar": "#061426",
+      "toolbar_text": "#e0f7ff",
+      "tab_background_text": "#8bd3ff",
+      "tab_selected": "#0b3b78",
+      "tab_text": "#ffffff",
+      "tab_line": "#22d3ee",
+      "bookmark_text": "#bfdbfe",
+      "button_background_hover": "#0e7490",
+      "button_background_active": "#0891b2",
+      "popup": "#07111f",
+      "popup_text": "#e0f7ff",
+      "popup_border": "#155e75",
+      "input_background": "#020617",
+      "input_color": "#e0f7ff",
+      "input_border": "#0891b2",
+      "icons": "#b6e6ff",
+      "icons_attention": "#f472b6",
+      "ntp_background": "#030712",
+      "ntp_text": "#dff7ff",
+      "sidebar": "#030712",
+      "sidebar_text": "#dbeafe",
+      "sidebar_border": "#164e63"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

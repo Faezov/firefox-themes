@@ -1,0 +1,55 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "deep-blue-theme@bulatfaezov",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "version": "1.0",
+  "name": "Deep Blue",
+  "description": "A simple dark blue Firefox theme with cool cyan text, bright active tabs, and calm navy chrome.",
+  "theme": {
+    "colors": {
+      "frame": "#020617",
+      "toolbar": "#0f172a",
+      "toolbar_text": "#e0f2fe",
+
+      "tab_background_text": "#93c5fd",
+      "tab_selected": "#1e3a8a",
+      "tab_text": "#ffffff",
+      "tab_line": "#38bdf8",
+
+      "bookmark_text": "#bfdbfe",
+
+      "button_background_hover": "#1d4ed8",
+      "button_background_active": "#2563eb",
+
+      "popup": "#0f172a",
+      "popup_text": "#e0f2fe",
+      "popup_border": "#1e40af",
+
+      "input_background": "#020617",
+      "input_color": "#e0f2fe",
+      "input_border": "#2563eb",
+
+      "icons": "#bfdbfe",
+      "icons_attention": "#38bdf8",
+
+      "ntp_background": "#020617",
+      "ntp_text": "#e0f2fe",
+
+      "sidebar": "#020617",
+      "sidebar_text": "#dbeafe",
+      "sidebar_border": "#1e3a8a"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

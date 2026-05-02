@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="200" viewBox="0 0 3000 200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020617"/>
+      <stop offset="0.48" stop-color="#061426"/>
+      <stop offset="1" stop-color="#160f3d"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="42%" cy="38%" r="60%">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="0.38" stop-color="#38bdf8"/>
+      <stop offset="0.74" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </radialGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .pix { shape-rendering: crispEdges; }
+      .twinkle { animation: twinkle 2.4s steps(2,end) infinite; }
+      .twinkle2 { animation: twinkle 3.1s steps(2,end) infinite reverse; }
+      .drift { animation: drift 5.5s linear infinite; }
+      .drift2 { animation: drift2 7s linear infinite; }
+      .wave1 { animation: wave1 3.6s ease-in-out infinite alternate; }
+      .wave2 { animation: wave2 4.2s ease-in-out infinite alternate; }
+      .pulse { animation: pulse 3.5s ease-in-out infinite; }
+      @keyframes twinkle { 0%, 100% { opacity: .25; } 50% { opacity: 1; } }
+      @keyframes drift { from { transform: translateX(0); } to { transform: translateX(-120px); } }
+      @keyframes drift2 { from { transform: translateX(0); } to { transform: translateX(-190px); } }
+      @keyframes wave1 { from { transform: translate(0, 0); } to { transform: translate(-34px, -5px); } }
+      @keyframes wave2 { from { transform: translate(0, 0); } to { transform: translate(48px, 4px); } }
+      @keyframes pulse { 0%,100% { opacity: .7; } 50% { opacity: 1; } }
+    </style>
+  </defs>
+
+  <rect width="3000" height="200" fill="url(#bg)"/>
+
+  <!-- readable dark overlay for left-side tab/toolbar area -->
+  <linearGradient id="leftFade" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#020617" stop-opacity="0.92"/>
+    <stop offset="0.36" stop-color="#020617" stop-opacity="0.62"/>
+    <stop offset="0.58" stop-color="#020617" stop-opacity="0.18"/>
+    <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+  </linearGradient>
+  <rect width="1900" height="200" fill="url(#leftFade)"/>
+
+  <!-- pixel stars -->
+  <g class="pix">
+    <g class="twinkle" fill="#93c5fd">
+      <rect x="1230" y="18" width="8" height="8"/><rect x="1482" y="35" width="6" height="6"/>
+      <rect x="1732" y="23" width="8" height="8"/><rect x="2058" y="14" width="6" height="6"/>
+      <rect x="2370" y="42" width="8" height="8"/><rect x="2686" y="18" width="6" height="6"/>
+      <rect x="2840" y="60" width="8" height="8"/>
+    </g>
+    <g class="twinkle2" fill="#f0abfc">
+      <rect x="1354" y="70" width="6" height="6"/><rect x="1620" y="52" width="8" height="8"/>
+      <rect x="1910" y="78" width="6" height="6"/><rect x="2260" y="54" width="8" height="8"/>
+      <rect x="2535" y="84" width="6" height="6"/><rect x="2920" y="32" width="8" height="8"/>
+    </g>
+  </g>
+
+  <!-- moon / pixel planet -->
+  <g class="pix pulse" filter="url(#softGlow)">
+    <rect x="2596" y="26" width="104" height="104" fill="url(#moon)"/>
+    <rect x="2576" y="46" width="144" height="64" fill="url(#moon)"/>
+    <rect x="2616" y="6" width="64" height="144" fill="url(#moon)"/>
+    <rect x="2660" y="18" width="56" height="118" fill="#020617" opacity="0.5"/>
+    <rect x="2684" y="38" width="28" height="22" fill="#020617" opacity="0.46"/>
+    <rect x="2632" y="72" width="34" height="12" fill="#e0f2fe" opacity="0.55"/>
+    <rect x="2588" y="96" width="46" height="10" fill="#a855f7" opacity="0.45"/>
+  </g>
+
+  <!-- neon tide waves -->
+  <g class="pix wave1" fill="none" stroke-linecap="square" stroke-width="6" filter="url(#softGlow)">
+    <path d="M1180 118 L1320 108 L1460 124 L1600 112 L1740 130 L1880 116 L2020 126 L2160 110 L2300 124 L2440 112 L2580 128 L2720 116 L3000 126" stroke="#22d3ee"/>
+    <path d="M1250 142 L1390 128 L1530 146 L1670 132 L1810 150 L1950 136 L2090 150 L2230 130 L2370 146 L2510 132 L2650 148 L2790 136 L3000 150" stroke="#3b82f6" opacity="0.95"/>
+  </g>
+  <g class="pix wave2" fill="none" stroke-linecap="square" stroke-width="5" filter="url(#softGlow)">
+    <path d="M1450 158 L1600 144 L1750 164 L1900 148 L2050 166 L2200 152 L2350 168 L2500 150 L2650 166 L2800 154 L3000 170" stroke="#a855f7" opacity="0.95"/>
+    <path d="M1680 176 L1840 166 L2000 180 L2160 168 L2320 184 L2480 170 L2640 186 L2800 174 L3000 188" stroke="#ec4899" opacity="0.75"/>
+  </g>
+
+  <!-- moving pixel particles -->
+  <g class="pix drift" fill="#22d3ee" opacity="0.9">
+    <rect x="1580" y="24" width="10" height="10"/><rect x="1770" y="92" width="8" height="8"/>
+    <rect x="1980" y="62" width="10" height="10"/><rect x="2210" y="106" width="8" height="8"/>
+    <rect x="2445" y="28" width="10" height="10"/><rect x="2760" y="92" width="8" height="8"/>
+    <rect x="2940" y="66" width="10" height="10"/>
+  </g>
+  <g class="pix drift2" fill="#a855f7" opacity="0.85">
+    <rect x="1510" y="74" width="8" height="8"/><rect x="1820" y="32" width="12" height="12"/>
+    <rect x="2130" y="86" width="8" height="8"/><rect x="2360" y="16" width="10" height="10"/>
+    <rect x="2660" y="116" width="8" height="8"/><rect x="2880" y="104" width="12" height="12"/>
+  </g>
+
+  <!-- bottom pixel grid -->
+  <g class="pix" opacity="0.55">
+    <path d="M0 174 H3000 M0 188 H3000" stroke="#164e63" stroke-width="4"/>
+    <path d="M1450 148 L1260 200 M1580 148 L1480 200 M1710 148 L1700 200 M1840 148 L1920 200 M1970 148 L2140 200 M2100 148 L2360 200 M2230 148 L2580 200 M2360 148 L2800 200 M2490 148 L3000 200" stroke="#0e7490" stroke-width="3"/>
+  </g>
+</svg>

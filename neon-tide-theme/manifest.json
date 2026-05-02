@@ -1,0 +1,55 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "neon-tide@bulatfaezov",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "version": "1.0",
+  "name": "Neon Tide",
+  "description": "A dark neon Firefox theme with electric cyan waves over a deep navy frame.",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "theme": {
+    "images": {
+      "theme_frame": "images/header.png"
+    },
+    "colors": {
+      "frame": "#030712",
+      "toolbar": "#07111f",
+      "toolbar_text": "#dff7ff",
+      "tab_background_text": "#8bd3ff",
+      "tab_selected": "#0b3b78",
+      "tab_text": "#ffffff",
+      "tab_line": "#22d3ee",
+      "bookmark_text": "#bfdbfe",
+      "button_background_hover": "#0e7490",
+      "button_background_active": "#0891b2",
+      "popup": "#07111f",
+      "popup_text": "#e0f7ff",
+      "popup_border": "#155e75",
+      "input_background": "#020617",
+      "input_color": "#e0f7ff",
+      "input_border": "#0891b2",
+      "icons": "#b6e6ff",
+      "icons_attention": "#a855f7",
+      "ntp_background": "#030712",
+      "ntp_text": "#dff7ff",
+      "sidebar": "#030712",
+      "sidebar_text": "#dbeafe",
+      "sidebar_border": "#164e63"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

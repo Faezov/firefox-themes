@@ -1,0 +1,19 @@
+# Local experiments and generated packages
+.training_ground/
+prof_img/
+.codex
+
+# Add-on build outputs
+*.zip
+*.xpi
+web-ext-artifacts/
+
+# Source-art editor files
+*.xcf
+
+# Duplicate export kept outside the packaged Neon Pixel Tide source folder
+neon-pixel-tide/neon-pixel-tide.svg
+
+# Local platform/tooling noise
+node_modules/
+.DS_Store

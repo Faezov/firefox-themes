@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="5000" height="200" viewBox="0 0 5000 200" preserveAspectRatio="xMaxYMin slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#03091f"/>
+      <stop offset="34%" stop-color="#08286c"/>
+      <stop offset="70%" stop-color="#174c96"/>
+      <stop offset="100%" stop-color="#08172f"/>
+    </linearGradient>
+    <linearGradient id="leftReadability" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#020817" stop-opacity=".95"/>
+      <stop offset="35%" stop-color="#020817" stop-opacity=".78"/>
+      <stop offset="62%" stop-color="#020817" stop-opacity=".28"/>
+      <stop offset="100%" stop-color="#020817" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wheat" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#091124"/>
+      <stop offset="36%" stop-color="#1a376d"/>
+      <stop offset="62%" stop-color="#a66c22"/>
+      <stop offset="100%" stop-color="#f0b43d"/>
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="83%" cy="25%" r="42%">
+      <stop offset="0%" stop-color="#fff08b" stop-opacity=".56"/>
+      <stop offset="34%" stop-color="#f2b72f" stop-opacity=".18"/>
+      <stop offset="100%" stop-color="#0a1d4c" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="paintGlow" x="-90%" y="-90%" width="280%" height="280%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="wideBlur" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+    <style>
+      .sky-drift-a { animation: skyDriftA 11s ease-in-out infinite alternate; }
+      .sky-drift-b { animation: skyDriftB 15s ease-in-out infinite alternate; }
+      .swirl { animation: swirlPulse 7s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .star { animation: starPulse 3.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .star-slow { animation: starPulseSlow 5.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .wheat-stroke { animation: wheatMove 8s ease-in-out infinite alternate; }
+      .cypress { animation: cypressSway 6s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: 50% 100%; }
+      @keyframes skyDriftA { from { transform: translateX(-42px); } to { transform: translateX(64px); } }
+      @keyframes skyDriftB { from { transform: translateX(70px); } to { transform: translateX(-80px); } }
+      @keyframes swirlPulse { 0%,100% { opacity: .72; transform: scale(1) rotate(-1deg); } 50% { opacity: 1; transform: scale(1.035) rotate(2deg); } }
+      @keyframes starPulse { 0%,100% { opacity: .82; transform: scale(1); } 50% { opacity: 1; transform: scale(1.14); } }
+      @keyframes starPulseSlow { 0%,100% { opacity: .64; transform: scale(.96); } 50% { opacity: 1; transform: scale(1.08); } }
+      @keyframes wheatMove { from { transform: translateX(-28px); } to { transform: translateX(42px); } }
+      @keyframes cypressSway { from { transform: skewX(-1.2deg); } to { transform: skewX(1.6deg); } }
+    </style>
+  </defs>
+
+  <rect width="5000" height="200" fill="url(#sky)"/>
+  <rect width="5000" height="200" fill="url(#goldGlow)">
+    <animate attributeName="opacity" values=".62;.9;.62" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <rect width="3150" height="200" fill="url(#leftReadability)"/>
+
+  <g class="sky-drift-a" fill="none" stroke-linecap="round" filter="url(#wideBlur)" opacity=".84">
+    <path d="M2300 42 C2680 -18 3020 96 3370 44 C3630 6 3860 16 4150 68" stroke="#5fb3ff" stroke-width="10" opacity=".30"/>
+    <path d="M2520 78 C2860 20 3180 130 3510 70 C3780 24 4070 36 4380 94" stroke="#e8d863" stroke-width="7" opacity=".34"/>
+    <path d="M3000 26 C3280 -18 3510 22 3690 66 C3860 108 4150 106 4440 54" stroke="#91d5ff" stroke-width="6" opacity=".34"/>
+    <path d="M1780 94 C2190 42 2480 122 2860 88 C3150 62 3370 70 3650 112" stroke="#2c83d4" stroke-width="11" opacity=".32"/>
+  </g>
+
+  <g class="sky-drift-b" fill="none" stroke-linecap="round" filter="url(#wideBlur)" opacity=".78">
+    <path d="M3320 120 C3680 66 3950 164 4310 112 C4530 80 4740 88 5000 124" stroke="#f2c84d" stroke-width="8" opacity=".34"/>
+    <path d="M3640 32 C3910 -2 4160 42 4320 82 C4480 122 4720 118 5000 72" stroke="#7ec4ff" stroke-width="7" opacity=".40"/>
+    <path d="M2680 122 C3030 78 3340 170 3680 130 C3980 96 4250 102 4550 146" stroke="#173d91" stroke-width="15" opacity=".32"/>
+    <path d="M2120 26 C2400 8 2660 50 2860 88 C3090 132 3370 128 3650 80" stroke="#fff27a" stroke-width="4" opacity=".24"/>
+  </g>
+
+  <g class="swirl" filter="url(#paintGlow)">
+    <path d="M3835 74 C3780 30 3848 -8 3938 18 C4022 42 4036 106 3962 130 C3884 154 3786 118 3802 72 C3816 32 3890 38 3926 62 C3964 88 3936 116 3896 110" fill="none" stroke="#f4d756" stroke-width="9" stroke-linecap="round" opacity=".84"/>
+    <path d="M3842 74 C3812 45 3862 22 3918 40 C3970 56 3978 94 3928 108 C3882 120 3838 98 3848 76 C3858 58 3890 60 3908 74" fill="none" stroke="#fff4a3" stroke-width="4" stroke-linecap="round" opacity=".78"/>
+    <path d="M3768 88 C3840 164 4002 160 4072 86" fill="none" stroke="#72c4ff" stroke-width="7" stroke-linecap="round" opacity=".38"/>
+  </g>
+
+  <g filter="url(#paintGlow)">
+    <g class="star" transform="translate(4238 38)">
+      <circle r="11" fill="#fff6a6"/>
+      <path d="M0 -29 L6 -8 L27 -13 L10 2 L25 18 L4 10 L-7 30 L-6 8 L-29 13 L-10 -2 L-25 -18 L-4 -10 Z" fill="#ffd93f"/>
+      <circle r="4" fill="#fffde2"/>
+    </g>
+    <g class="star-slow" transform="translate(4556 86)">
+      <circle r="9" fill="#fff0a0"/>
+      <path d="M0 -24 L5 -7 L23 -10 L8 2 L20 16 L3 8 L-8 23 L-6 6 L-24 9 L-8 -2 L-19 -16 L-3 -8 Z" fill="#ffd54f"/>
+      <circle r="3.5" fill="#fffde6"/>
+    </g>
+    <g class="star-slow" transform="translate(3390 54)">
+      <circle r="7" fill="#ffe889"/>
+      <path d="M0 -20 L4 -6 L19 -8 L7 1 L17 13 L3 7 L-7 19 L-5 5 L-20 8 L-7 -1 L-16 -13 L-3 -7 Z" fill="#f2c43a"/>
+      <circle r="2.8" fill="#fffde1"/>
+    </g>
+    <g class="star" transform="translate(4830 28)">
+      <circle r="6" fill="#fff0a6"/>
+      <path d="M0 -18 L4 -5 L17 -8 L6 1 L15 12 L2 6 L-6 17 L-5 5 L-18 7 L-6 -1 L-14 -12 L-2 -6 Z" fill="#ffd75c"/>
+    </g>
+  </g>
+
+  <g fill="#ffe778" opacity=".72">
+    <circle class="star-slow" cx="2940" cy="42" r="2.2"/>
+    <circle class="star" cx="3160" cy="104" r="2.0"/>
+    <circle class="star-slow" cx="3560" cy="24" r="1.8"/>
+    <circle class="star" cx="3718" cy="132" r="2.2"/>
+    <circle class="star-slow" cx="4388" cy="132" r="2.0"/>
+    <circle class="star" cx="4710" cy="124" r="2.0"/>
+    <circle class="star-slow" cx="2520" cy="72" r="1.6"/>
+    <circle class="star" cx="2180" cy="40" r="1.5"/>
+  </g>
+
+  <g>
+    <path d="M0 138 C620 118 1160 146 1680 126 C2260 104 2780 140 3340 120 C3920 98 4420 118 5000 92 L5000 200 L0 200 Z" fill="url(#wheat)" opacity=".94"/>
+    <path d="M0 158 C660 136 1210 166 1810 148 C2420 128 2920 166 3520 144 C4130 122 4550 150 5000 128 L5000 200 L0 200 Z" fill="#68451a" opacity=".42"/>
+    <path d="M0 182 C760 164 1320 190 2040 174 C2730 158 3380 190 4020 170 C4520 154 4740 178 5000 160 L5000 200 L0 200 Z" fill="#060b18" opacity=".86"/>
+  </g>
+
+  <g class="wheat-stroke" fill="none" stroke-linecap="round" opacity=".82">
+    <path d="M2460 154 C2780 130 3020 168 3360 146" stroke="#f2bd3c" stroke-width="5" opacity=".68"/>
+    <path d="M2960 174 C3320 146 3720 184 4100 154" stroke="#ffdd64" stroke-width="4" opacity=".64"/>
+    <path d="M3520 138 C3860 116 4200 148 4540 122" stroke="#d88b2b" stroke-width="6" opacity=".58"/>
+    <path d="M3880 172 C4260 146 4620 174 5000 148" stroke="#ffe070" stroke-width="4" opacity=".62"/>
+    <path d="M1740 166 C2100 142 2380 176 2740 152" stroke="#275fb6" stroke-width="6" opacity=".38"/>
+  </g>
+
+  <g class="cypress" filter="url(#paintGlow)">
+    <path d="M4368 200 C4352 174 4350 154 4364 128 C4328 136 4314 122 4334 102 C4300 104 4294 84 4326 72 C4294 58 4310 42 4344 46 C4344 24 4372 18 4388 42 C4416 18 4444 34 4430 58 C4468 62 4470 84 4434 94 C4460 114 4440 132 4406 128 C4422 156 4412 178 4394 200 Z" fill="#021008"/>
+    <path d="M4378 196 C4370 166 4374 126 4394 78" fill="none" stroke="#17371e" stroke-width="8" stroke-linecap="round" opacity=".70"/>
+    <path d="M4340 118 C4376 108 4406 104 4438 90" fill="none" stroke="#234b24" stroke-width="5" stroke-linecap="round" opacity=".58"/>
+  </g>
+
+  <g fill="#060712" opacity=".92">
+    <path d="M0 190 L5000 190 L5000 200 L0 200 Z"/>
+    <path d="M4620 200 C4640 166 4626 136 4660 104 C4634 104 4624 88 4650 78 C4626 60 4648 44 4672 58 C4674 34 4702 32 4714 58 C4746 52 4760 74 4732 90 C4760 104 4748 124 4720 122 C4740 154 4730 180 4700 200 Z"/>
+  </g>
+</svg>

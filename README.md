@@ -10,6 +10,8 @@ A small collection of Firefox themes built from simple WebExtension manifests an
 | Southern Cross Night Bulat Theme | `southern_cross_night_bulat_theme_v010/` | Animated SVG southern night sky with a bright Southern Cross, soft rain, and forest horizon. |
 | Surreal Time Desert Bulat Theme | `surreal_time_desert_bulat_theme_v010/` | Animated SVG night desert with melting clock shapes, floating stars, and warm dream shadows. |
 | Impressionist Water Garden Bulat Theme | `impressionist_water_garden_bulat_theme_v010/` | Animated SVG water garden with soft dawn light, lily pads, and shimmering brushstroke reflections. |
+| Swirling Cypress Night Bulat Theme | `swirling_cypress_night_bulat_theme_v010/` | Animated SVG cobalt night sky with golden starbursts, expressive swirls, cypress silhouettes, and wheat-field strokes. |
+| Van Gogh Static Night Bulat Theme | `van_gogh_static_night_bulat_theme_v010/` | Static PNG post-impressionist night landscape with cobalt sky, golden stars, cypress shadow, and wheat-field brushwork. |
 | Neon Tide | `neon-tide-theme/` | Static PNG header with neon cyan waves and bundled theme icons. |
 | Neon Pixel Tide | `neon-pixel-tide/neon-pixel-tide-theme/` | Animated SVG pixel-art tide with neon particles. |
 | Deep Blue | `deep-blue-theme/` | Lightweight color-only dark blue theme. |
